@@ -91,4 +91,4 @@ A text processing tool utilizing specific Data Structures for optimized sorting 
 **Hashim Abdulaziz**
 * **Role:** Electronics Engineer & Backend Developer
 * [GitHub Profile](https://github.com/HashimAbdulaziz)
-* [LinkedIn](https://www.linkedin.com/in/HashimAbdulaziz)
+* [LinkedIn](https://www.linkedin.com/in/hashim-abdulaziz-095b68281/)
