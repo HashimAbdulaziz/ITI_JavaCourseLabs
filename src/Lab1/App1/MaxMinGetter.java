@@ -2,7 +2,7 @@ package Lab1.App1;
 
 public class MaxMinGetter {
   
-  int getMin(int[] A){
+  public int getMin(int[] A){
     int min = A[0];
     for(int i = 1; i < A.length; i++){
       if(A[i] < min){
@@ -12,7 +12,7 @@ public class MaxMinGetter {
     return min;
   }
 
-  int getMax(int[] A){
+  public int getMax(int[] A){
     int max = A[0];
     for(int i = 1; i < A.length; i++){
       if(A[i] > max){

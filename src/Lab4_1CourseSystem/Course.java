@@ -1,4 +1,4 @@
-package CourseSystem;
+package Lab4_1CourseSystem;
 
 public class Course {
     private Integer courseId;

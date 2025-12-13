@@ -1,4 +1,4 @@
-package CourseSystem;
+package Lab4_1CourseSystem;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;

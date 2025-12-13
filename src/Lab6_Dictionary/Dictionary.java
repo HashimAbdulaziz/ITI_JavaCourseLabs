@@ -1,4 +1,4 @@
-package Lab6;
+package Lab6_Dictionary;
 
 import java.util.Map;
 import java.util.SortedSet;

@@ -1,3 +1,7 @@
+package Lab1.App1;
+
+import Lab1.App1.MaxMinGetter;
+
 import java.util.Random;
 
 public class Main {

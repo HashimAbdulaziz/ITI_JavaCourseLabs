@@ -1,4 +1,4 @@
-package Lab2;//import java.lang.String;
+package Lab2_IpChecker;//import java.lang.String;
 import java.util.StringTokenizer;
 
 public class Main {

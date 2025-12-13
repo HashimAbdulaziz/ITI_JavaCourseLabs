@@ -1,4 +1,4 @@
-package Lab6;
+package Lab6_Dictionary;
 
 public class Main {
     public static void main(String[] args) {
