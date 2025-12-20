@@ -12,22 +12,23 @@ public class Exercise2 {
 
     public static void main(String[] args) {
         CountryDao countryDao = InMemoryWorldDao.getInstance();
-        // write your answer here
         List<Country> allCountries = countryDao.findAllCountries();
-
 
         Map<String, Optional<City>> citiesByContinent = allCountries.stream()
                 .collect(Collectors.groupingBy(
                         Country::getContinent,
-                        Collectors.flatMapping(country -> country.getCities().stream(),
+                        Collectors.flatMapping(
+                                country -> country.getCities().stream(),
                                 Collectors.maxBy(Comparator.comparing(City::getPopulation))
                         )
-        ));
+                ));
 
+        citiesByContinent.forEach((continent, cityOptional) -> {
+            String cityInfo = cityOptional
+                    .map(city -> city.getName() + " " + city.getPopulation())
+                    .orElse("No cities");
 
-
-
-
+            System.out.printf("%-15s: %s%n", continent, cityInfo);
+        });
     }
-
 }

@@ -20,5 +20,24 @@ public class LibraryApp {
 
         library.displayAllItems();
 
+        Client client1 = new Client(1, "HashimClient", "hashim@email.com");
+
+        try {
+            library.addClient(client1);
+
+            System.out.println("\n--- Borrowing ---");
+
+            library.borrowItem(1, 100);
+
+            System.out.println("Is Book 100 borrowed? " + book1.isBorrowed());
+
+            library.borrowItem(1, 100);
+
+            library.returnItem(1, 100);
+            System.out.println("Is Book 100 borrowed after return? " + book1.isBorrowed());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

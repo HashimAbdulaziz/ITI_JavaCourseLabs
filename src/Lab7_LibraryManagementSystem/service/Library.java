@@ -110,4 +110,30 @@ public class Library{
         return this.itemsCount;
     }
 
+    public void borrowItem(int clientId, int itemId) throws ClientNotFoundException, ItemNotFoundException {
+        Client client = retrieveClient(clientId);
+        LibraryItem item = retrieveItem(itemId);
+
+        if (item.isBorrowed()) {
+            System.out.println("Item ID " + itemId + " is borrowed.");
+        } else {
+            item.setBorrowed(true);
+            client.borrowItem(item);
+            System.out.println("Client " + clientId + " successfully borrowed Item " + itemId);
+        }
+    }
+
+    public void returnItem(int clientId, int itemId) throws ClientNotFoundException, ItemNotFoundException {
+        Client client = retrieveClient(clientId);
+        LibraryItem item = retrieveItem(itemId);
+
+        if (client.getBorrowedItems().contains(item)) {
+            item.setBorrowed(false);
+            client.returnItem(item);
+            System.out.println("Client " + clientId + " successfully returned Item " + itemId);
+        } else {
+            System.out.println("Client " + clientId + " does not have Item " + itemId);
+        }
+    }
+
 }

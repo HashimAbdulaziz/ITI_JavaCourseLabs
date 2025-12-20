@@ -20,7 +20,7 @@ public class DateTimeApp extends JFrame {
                 d = new Date();
                 timeLabel.setText(d.toString());
                 try {
-                    Thread.sleep(1000); // you’ll need to catch an exception
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
